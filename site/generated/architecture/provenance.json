@@ -1,0 +1,60 @@
+{
+  "$comment": "本目录内的文件为**由代码派生的生成物**，禁止手工编辑。跑 `npm run copy:architecture` 重新生成。",
+  "generatedAt": "2026-10-10",
+  "source": {
+    "repo": "GWIoTApi（内网 GitLab 仓库，地址按 FR-012 隐去）",
+    "assetsDir": "doc/assets/",
+    "revision": "be956cb64bd4ad1484236760aaf7313e2d637f4c",
+    "shortRevision": null
+  },
+  "generator": "archify（类图的结构描述为 类图.architecture.json，修改后可用 archify 重新生成）",
+  "regeneration": "npm run copy:architecture（重新运行本脚本即可从上游产物刷新）",
+  "artifactLocale": "zh-CN",
+  "artifactTitle": "GWIoTApi 组件化类架构",
+  "redactionsApplied": [
+    {
+      "file": "class-diagram.html",
+      "rule": "内网仓库 URL"
+    },
+    {
+      "file": "class-diagram.html",
+      "rule": "内网仓库标签"
+    },
+    {
+      "file": "class-diagram.architecture.json",
+      "rule": "内网仓库 URL"
+    },
+    {
+      "file": "class-diagram.architecture.json",
+      "rule": "移除 meta.output（本机路径）"
+    }
+  ],
+  "excluded": [
+    {
+      "file": "类图.delivery.json",
+      "reason": "内部构建元数据：含本机绝对路径与产物哈希，对读者无意义且泄露环境信息"
+    },
+    {
+      "file": "类图.jpg",
+      "reason": "上游 README 已声明「早期初稿，已不对应现有代码，仅作历史保留」"
+    },
+    {
+      "file": "架构图.png",
+      "reason": "手工绘制于 2025-05，早于现行类图约 17 个月且无法与代码核对；发布它会让读者无法判断哪份架构说明有效（FR-014 要求单一真相源）。已在架构页说明该决定"
+    }
+  ],
+  "files": [
+    {
+      "file": "class-diagram.html",
+      "sourceFile": "类图.html"
+    },
+    {
+      "file": "class-diagram.png",
+      "sourceFile": "类图.png"
+    },
+    {
+      "file": "class-diagram.architecture.json",
+      "sourceFile": "类图.architecture.json"
+    }
+  ]
+}

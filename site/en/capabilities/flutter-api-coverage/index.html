@@ -1,0 +1,504 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-g5ptsecz"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>GWIoT Flutter API 覆盖表 | GWIoT</title><link rel="canonical" href="https://reoqoo.github.io/gwiot-docs/en/capabilities/flutter-api-coverage/"/><link rel="alternate" hreflang="zh" href="https://reoqoo.github.io/gwiot-docs/capabilities/flutter-api-coverage/"/><link rel="alternate" hreflang="en" href="https://reoqoo.github.io/gwiot-docs/en/capabilities/flutter-api-coverage/"/><link rel="alternate" hreflang="x-default" href="https://reoqoo.github.io/gwiot-docs/capabilities/flutter-api-coverage/"/><link rel="sitemap" href="/gwiot-docs/sitemap-index.xml"/><link rel="shortcut icon" href="/gwiot-docs/favicon.png" type="image/png"/><meta name="generator" content="Astro v7.3.8"/><meta name="generator" content="Starlight v0.42.6"/><meta property="og:title" content="GWIoT Flutter API 覆盖表"/><meta property="og:type" content="article"/><meta property="og:url" content="https://reoqoo.github.io/gwiot-docs/en/capabilities/flutter-api-coverage/"/><meta property="og:locale" content="en"/><meta property="og:site_name" content="GWIoT"/><meta name="twitter:card" content="summary_large_image"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/gwiot-docs/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/gwiot-docs/_astro/common.SvcFK5wg.css"><script type="module" src="/gwiot-docs/_astro/page.cNngjUgL.js"></script></head><body class="astro-g5ptsecz"><a class="sl-skip-link astro-qb7clj6f" href="#_top">Skip to content</a><div class="page sl-flex astro-yntsjkba"><header class="header astro-yntsjkba"><div class="header astro-by6fddyj"><div class="title-wrapper sl-flex astro-by6fddyj"><a href="/gwiot-docs/en" class="site-title sl-flex astro-6rvad3va"><img class="light:sl-hidden print:hidden astro-6rvad3va" alt="GWIoT" src="/gwiot-docs/_astro/gwiot-lockup-dark.9tsBfvWB.png" width="465" height="133"><img class="dark:sl-hidden print:block astro-6rvad3va" alt="GWIoT" src="/gwiot-docs/_astro/gwiot-lockup-light.iTTY7CLN.png" width="465" height="133"><span class="sr-only astro-6rvad3va" translate="no">GWIoT</span></a></div><div class="sl-flex print:hidden astro-by6fddyj"><site-search class="astro-by6fddyj astro-b5kgnn7o" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}"><button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-b5kgnn7o"><svg aria-hidden="true" class="astro-b5kgnn7o astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-b5kgnn7o" aria-hidden="true">Search</span><kbd class="sl-hidden md:sl-flex astro-b5kgnn7o" style="display: none;"><kbd class="astro-b5kgnn7o">Ctrl</kbd><kbd class="astro-b5kgnn7o">K</kbd></kbd></button><dialog style="padding:0" aria-label="Search" class="astro-b5kgnn7o"><div class="dialog-frame sl-flex astro-b5kgnn7o"><button data-close-modal class="sl-flex md:sl-hidden astro-b5kgnn7o">Cancel</button><div class="search-container astro-b5kgnn7o"><div id="starlight__search" class="astro-b5kgnn7o"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script><script type="module" src="/gwiot-docs/_astro/Search.astro_astro_type_script_index_0_lang.B_qaFirz.js"></script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-by6fddyj"><div class="sl-flex social-icons astro-by6fddyj"></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Dark</option><option value="light" class="astro-2z5xp7gb">Light</option><option value="auto" selected class="astro-2z5xp7gb">Auto</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><script type="module">var e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e));function r(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function a(e){StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});var o=class extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}};customElements.define(`starlight-theme-select`,o);</script><starlight-lang-select><label style="--sl-select-width: 7em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select language</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="/gwiot-docs/capabilities/flutter-api-coverage/" class="astro-2z5xp7gb">中文</option><option value="/gwiot-docs/en/capabilities/flutter-api-coverage/" selected class="astro-2z5xp7gb">English</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-lang-select><script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script></div></div></header><nav class="sidebar print:hidden astro-yntsjkba" aria-label="Main"><button popovertarget="starlight__sidebar" class="sl-menu-button sl-flex md:sl-hidden print:hidden astro-r2osgdlg"><svg aria-hidden="true" class="open-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg><svg aria-hidden="true" class="close-menu astro-r2osgdlg astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg><span class="sr-only astro-r2osgdlg">Menu</span></button><script type="module">var e=class extends HTMLElement{constructor(){super();let e=matchMedia(`(min-width: 50em)`),t=()=>{this.popover=e.matches?null:`auto`};t(),e.addEventListener(`change`,()=>t()),this.addEventListener(`toggle`,({newState:e})=>this.trapFocus(e===`open`))}trapFocus(e){document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}};customElements.define(`sl-sidebar-pane`,e);</script><sl-sidebar-pane popover id="starlight__sidebar" class="sidebar-pane astro-yntsjkba"><div class="sidebar-content sl-flex astro-yntsjkba"><sl-sidebar-state-persist data-hash="1i3o6by" class="astro-ipdry5cl"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/" class="large astro-rmhv4bp6"><span class="astro-rmhv4bp6">GWIoT Integration Docs</span></a></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Architecture</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/architecture/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Architecture</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/architecture/flutter-plugin-architecture/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">GWIoT Flutter 插件架构</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Capabilities</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/capabilities/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Capabilities</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/capabilities/flutter-api-coverage/" aria-current="page" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">GWIoT Flutter API 覆盖表</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Built-in vs. Customizable</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/customization/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Built-in vs. Customizable</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Development Models</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/dev-models/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Development Models</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/dev-models/admin-api/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Back-office Management API</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/dev-models/basic-service-api/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Customer Basic Service Activation, Query and Management API</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/dev-models/c2c-integration/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Customer Cloud-to-Cloud Integration</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/dev-models/signature-calculation/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Signature Calculation</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/dev-models/thing-model-api/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">物模型相关接口</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Push Integration</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="4"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/push/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Push Integration</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/push/demo-push-integration/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Push notification integration</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/push/device-online-offline/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Gwell Device Online/Offline Status</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/push/oem-device-creation/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">OEM Device Creation Information</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/push/offline-push-protocol/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Gwell Offline Push Protocol</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/push/saas-webhook-message/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Gwell SaaS Webhook Message Documentation</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/push/webhook-overview/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">技威云 IoT 消息推送技术文档概览</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Progressive Integration</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="5"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Progressive Integration</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/api-changelog/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">API Changelog</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/app-develop-guide/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">App Development Guide</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/custom-services-page/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Custom Cloud Service and Traffic Page Navigation</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/dev-flow/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Development flow and implemented features</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/device-sharing/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Device Sharing by Account</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/host-third-party-login/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">宿主账号的第三方登录与登录方式管理</span></a></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Per-platform guides</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="6"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/android-demo/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Android Demo Project</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/android-integration/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Android integration</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/flutter-integration/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">GWIoT Flutter Demo</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/flutter-plugin-overview/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">gwiot_flutter_plugin overview</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/ios-coding-guide/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">iOS Coding Guide</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/ios-demo/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">iOS Demo Project</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/ios-integration/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">iOS integration</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/plugin-local-development/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Local development of gwiot_flutter_plugin</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/integration/plugin-publishing/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Releasing and consuming the plugin</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">Integration path</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="7"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Integration path</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/s1-credentials/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Step 1: Obtain access credentials</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/s2-initialize/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Step 2: Initialize the SDK and choose an account system</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/s3-account/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Step 3: Wire up accounts and login</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/s4-device/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Step 4: Add devices: list, bind and control</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/s5-builtin-pages/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Step 5: Use the built-in pages</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/s6-messaging/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Step 6: Integrate cloud messaging and push</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/path/s7-customize/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Step 7: Customize on demand (implement extension interfaces)</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/setting-service/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Custom Device Settings Service</span></a></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/getting-started/third-party-login/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">Third-party Login SDK</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><details open class="astro-rmhv4bp6"><summary class="astro-rmhv4bp6"><span class="group-label astro-rmhv4bp6"><span class="large astro-rmhv4bp6">FAQ</span></span><svg aria-hidden="true" class="caret astro-rmhv4bp6 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="8"></sl-sidebar-restore><ul class="astro-rmhv4bp6"><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/faq/" class="astro-rmhv4bp6"><span class="astro-rmhv4bp6">FAQ</span></a></li></ul></details></li><li class="astro-rmhv4bp6"><a href="/gwiot-docs/en/search-notes/" class="large astro-rmhv4bp6"><span class="astro-rmhv4bp6">About site search</span></a></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-p4azlveh"><div class="social-icons astro-p4azlveh"></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select theme</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="dark" class="astro-2z5xp7gb">Dark</option><option value="light" class="astro-2z5xp7gb">Light</option><option value="auto" selected class="astro-2z5xp7gb">Auto</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>
+	StarlightThemeProvider.updatePickers();
+</script><starlight-lang-select><label style="--sl-select-width: 7em" class="astro-2z5xp7gb"><span class="sr-only astro-2z5xp7gb">Select language</span><svg aria-hidden="true" class="icon label-icon astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path fill-rule="evenodd" d="M8.516 3a.94.94 0 0 0-.941.94v1.15H2.94a.94.94 0 1 0 0 1.882h7.362a7.422 7.422 0 0 1-1.787 3.958 7.42 7.42 0 0 1-1.422-2.425.94.94 0 1 0-1.774.627 9.303 9.303 0 0 0 1.785 3.043 7.422 7.422 0 0 1-4.164 1.278.94.94 0 1 0 0 1.881 9.303 9.303 0 0 0 5.575-1.855 9.303 9.303 0 0 0 4.11 1.74l-.763 1.525a.968.968 0 0 0-.016.034l-1.385 2.77a.94.94 0 1 0 1.683.841l1.133-2.267h5.806l1.134 2.267a.94.94 0 0 0 1.683-.841l-1.385-2.769a.95.95 0 0 0-.018-.036l-3.476-6.951a.94.94 0 0 0-1.682 0l-1.82 3.639a7.423 7.423 0 0 1-3.593-1.256 9.303 9.303 0 0 0 2.27-5.203h1.894a.94.94 0 0 0 0-1.881H9.456V3.94A.94.94 0 0 0 8.516 3Zm6.426 11.794a1.068 1.068 0 0 1-.02.039l-.703 1.407h3.924l-1.962-3.924-1.24 2.478Z" clip-rule="evenodd"/></svg><select autocomplete="off" class="astro-2z5xp7gb"><option value="/gwiot-docs/capabilities/flutter-api-coverage/" class="astro-2z5xp7gb">中文</option><option value="/gwiot-docs/en/capabilities/flutter-api-coverage/" selected class="astro-2z5xp7gb">English</option></select><svg aria-hidden="true" class="icon caret astro-2z5xp7gb astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-lang-select></div></div></div></sl-sidebar-pane></nav><div class="main-frame astro-yntsjkba"><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-lrzkfocr"><aside class="right-sidebar-container print:hidden astro-lrzkfocr"><div class="right-sidebar astro-lrzkfocr"><div class="lg:sl-hidden astro-qok35upx"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-66cqc7ze"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-66cqc7ze"><details id="starlight__mobile-toc" class="astro-66cqc7ze"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-66cqc7ze"><span class="toggle sl-flex astro-66cqc7ze">On this page<svg aria-hidden="true" class="caret astro-66cqc7ze astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></span><span class="display-current astro-66cqc7ze"></span></summary><div class="dropdown astro-66cqc7ze"><ul class="isMobile astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Overview</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#已完成纵切面" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">已完成纵切面</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#更新规则" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">更新规则</span></a></li></ul></div></details></nav></mobile-starlight-toc><script type="module" src="/gwiot-docs/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.C3fM4Kra.js"></script></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-qok35upx"><div class="sl-container astro-qok35upx"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-jugkfwgx" style="--depth: 0;"><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#_top" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">Overview</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#已完成纵切面" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">已完成纵切面</span></a></li><li style="--depth: 0;" class="astro-jugkfwgx"><a href="#更新规则" style="--depth: 0;" class="astro-jugkfwgx"><span style="--depth: 0;" class="astro-jugkfwgx">更新规则</span></a></li></ul></nav></starlight-toc><script type="module" src="/gwiot-docs/_astro/TableOfContents.astro_astro_type_script_index_0_lang.BpJaGz7G.js"></script></div></div></div></aside><div class="main-pane astro-lrzkfocr"><main data-pagefind-body class="astro-g5ptsecz" lang="zh" dir="ltr"><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><h1 id="_top" class="astro-u72m6wot">GWIoT Flutter API 覆盖表</h1><p class="sl-flex astro-gsljcgkv"><svg aria-hidden="true" class="astro-gsljcgkv astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-color: var(--sl-color-orange-high);--sl-icon-size: 1.5em;"><path d="M12 16a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm10.67 1.47-8.05-14a3 3 0 0 0-5.24 0l-8 14A3 3 0 0 0 3.94 22h16.12a3 3 0 0 0 2.61-4.53Zm-1.73 2a1 1 0 0 1-.88.51H3.94a1 1 0 0 1-.88-.51 1 1 0 0 1 0-1l8-14a1 1 0 0 1 1.78 0l8.05 14a1 1 0 0 1 .05 1.02v-.02ZM12 8a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0V9a1 1 0 0 0-1-1Z"/></svg><span class="astro-gsljcgkv">This page has no maintained English version yet. The Chinese version is shown instead. Use your browser&#39;s built-in translation to read it.</span></p></div></div><div class="content-panel astro-a7po4psb"><div class="sl-container astro-a7po4psb"><div class="sl-markdown-content"><p>状态：<strong>已按纵切面实现并验收（2026-09-15）</strong>。本表以 Kotlin <code dir="auto">object GWIoT</code> 为权威来源；Flutter
+端无论内部如何分文件，均由顶层 <code dir="auto">GWIoT</code> 暴露（播放器组件除外）。</p>
+<table>
+<thead>
+<tr>
+<th>能力域</th>
+<th>Kotlin 组件/接口</th>
+<th>Flutter 公开面</th>
+<th>契约</th>
+<th>Android 映射</th>
+<th>iOS 映射</th>
+<th>Dart 测试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初始化：<code dir="auto">initialize(opts)</code></td>
+<td><code dir="auto">IInitializeDispatcherComponent.initialize</code></td>
+<td><code dir="auto">GWIoT.initialize(GwiotInitOptions)</code></td>
+<td><code dir="auto">GwiotInitializationApi.initialize(GInitOptionsMsg)</code></td>
+<td>已完成（映射 <code dir="auto">InitOptions</code>、注入 Application/Activity/版本）</td>
+<td>已完成（映射 <code dir="auto">InitOptions</code>、注入 <code dir="auto">AppConfig</code>）</td>
+<td>已完成（参数映射、业务失败、完整字段映射）</td>
+</tr>
+<tr>
+<td>初始化：<code dir="auto">sdkInitFinish</code></td>
+<td><code dir="auto">IInitializeDispatcherComponent.sdkInitFinish</code></td>
+<td><code dir="auto">GWIoT.sdkInitFinish</code>（<code dir="auto">GwiotLiveData&lt;bool&gt;</code>）</td>
+<td><code dir="auto">GwiotInitializationEvents.onInitializationChanged</code> + <code dir="auto">observeInitialization(bool)</code></td>
+<td>已完成（<code dir="auto">observeForever</code>/<code dir="auto">removeObserver</code>）</td>
+<td>已完成（<code dir="auto">observeForever(observer:)</code>/<code dir="auto">removeObserver</code>）</td>
+<td>已完成（就绪状态由平台流发布、平台替换后重置）</td>
+</tr>
+<tr>
+<td>初始化：释放与幂等</td>
+<td>—（Flutter 侧生命周期）</td>
+<td><code dir="auto">GWIoT.dispose</code></td>
+<td>—</td>
+<td>不适用</td>
+<td>不适用</td>
+<td>已完成（释放状态订阅；并发合并、顺序重复交给 SDK）</td>
+</tr>
+<tr>
+<td>系统配置：语言/环境/UI/平台配置</td>
+<td><code dir="auto">IPluginConfigComponent.setLanguage</code> / <code dir="auto">setEnv</code> / <code dir="auto">setUIConfiguration</code>、<code dir="auto">IInitializeDispatcherComponent.getPlatformConfig</code></td>
+<td><code dir="auto">GWIoT.setLanguage</code>、<code dir="auto">setEnvironment</code>、<code dir="auto">setUiConfiguration</code>、<code dir="auto">getPlatformConfig</code></td>
+<td><code dir="auto">GwiotSystemApi</code> 同名方法</td>
+<td>已完成（<code dir="auto">UIConfiguration</code>/<code dir="auto">Theme.Colors</code> 映射、suspend 桥接）</td>
+<td>已完成（同上）</td>
+<td>已完成（环境与语言映射、UI 颜色文案、平台配置与功能码、失败与缺失数据）</td>
+</tr>
+<tr>
+<td>账号：登录</td>
+<td><code dir="auto">IAccountManagerComponent.login(account,password)</code> / <code dir="auto">login(accessInfo)</code> / <code dir="auto">login2(c2c)</code> / <code dir="auto">login(hostUserId)</code></td>
+<td><code dir="auto">GWIoT.login</code>、<code dir="auto">GWIoT.loginWithAccessInfo</code>、<code dir="auto">GWIoT.loginWithC2C</code>、<code dir="auto">GWIoT.loginWithHostAccount</code></td>
+<td><code dir="auto">GwiotAccountApi.loginWithAccount</code> / <code dir="auto">loginWithAccessInfo</code> / <code dir="auto">loginWithC2CResult</code> / <code dir="auto">loginWithHostUserId</code></td>
+<td>已完成（含 suspend 回调桥接）</td>
+<td>已完成</td>
+<td>已完成（手机号/邮箱分支、C2C、accessInfo、宿主账号成功与失败）</td>
+</tr>
+<tr>
+<td>账号：登出与资料</td>
+<td><code dir="auto">logout</code> / <code dir="auto">getLoginUser</code> / <code dir="auto">refreshUserInfo</code> / <code dir="auto">modifyUserInfo</code> / <code dir="auto">modifyPassword</code></td>
+<td><code dir="auto">GWIoT.logout</code>、<code dir="auto">GWIoT.getLoginUser</code>、<code dir="auto">GWIoT.refreshUserInfo</code>、<code dir="auto">GWIoT.modifyUserInfo</code>、<code dir="auto">GWIoT.modifyPassword</code></td>
+<td><code dir="auto">GwiotAccountApi</code> 同名方法</td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（参数映射、结果与失败、空数据契约错误）</td>
+</tr>
+<tr>
+<td>账号：注册与验证码</td>
+<td><code dir="auto">IAccountRegisterComponent.querySupportedSmsRegisterCountryCodes</code> / <code dir="auto">sendRegisterCode</code> / <code dir="auto">verifyCode</code> / <code dir="auto">register</code> / <code dir="auto">sendResetPasswordCode</code> / <code dir="auto">resetPassword</code></td>
+<td><code dir="auto">GWIoT.querySupportedSmsRegisterCountryCodes</code>、<code dir="auto">sendRegisterCode</code>、<code dir="auto">verifyCode</code>、<code dir="auto">register</code>、<code dir="auto">sendResetPasswordCode</code>、<code dir="auto">resetPassword</code></td>
+<td><code dir="auto">GwiotAccountApi</code> 同名方法</td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（注册返回登录信息、验证码参数映射）</td>
+</tr>
+<tr>
+<td>账号：状态与事件</td>
+<td><code dir="auto">isLogin</code> / <code dir="auto">user</code> / <code dir="auto">accountEvent</code></td>
+<td><code dir="auto">GWIoT.isLogin</code>、<code dir="auto">GWIoT.currentUser</code>、<code dir="auto">GWIoT.accountEvents</code></td>
+<td><code dir="auto">GwiotObserverApi.observe/unobserve</code> + <code dir="auto">GwiotObserverEvents.onObserverEvent</code></td>
+<td>已完成（LiveData/LiveEvent 观察）</td>
+<td>已完成（同上）</td>
+<td>已完成（订阅驱动观察、退订释放、事件不重放）</td>
+</tr>
+<tr>
+<td>账号：推送 token</td>
+<td><code dir="auto">uploadPushToken</code></td>
+<td><code dir="auto">GWIoT.uploadPushToken</code></td>
+<td><code dir="auto">GwiotAccountApi.uploadPushToken</code></td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（系统推送注册仍由宿主负责）</td>
+</tr>
+<tr>
+<td>设备：目录查询</td>
+<td><code dir="auto">IDevMangerComponent.queryProductList</code> / <code dir="auto">queryProductListCacheFirst</code> / <code dir="auto">queryDeviceList</code> / <code dir="auto">queryDeviceListCacheFirst</code> / <code dir="auto">queryDevice</code> / <code dir="auto">queryDeviceCacheFirst</code>、<code dir="auto">Device.productInfo</code> 扩展</td>
+<td><code dir="auto">GWIoT.queryProductList</code>、<code dir="auto">GWIoT.queryDeviceList</code>、<code dir="auto">GWIoT.queryDevice</code>、<code dir="auto">GWIoT.queryProductByDevice</code></td>
+<td><code dir="auto">GwiotDeviceApi.queryProductList</code> / <code dir="auto">queryDeviceList</code> / <code dir="auto">queryDevice</code>（均带 <code dir="auto">cacheFirst</code>）/ <code dir="auto">queryProductByDevice</code></td>
+<td>已完成（按 <code dir="auto">cacheFirst</code> 选择 KMP 缓存优先重载；按设备查产品取 KMP <code dir="auto">device.productInfo</code>）</td>
+<td>已完成（同上）</td>
+<td>已完成（公共字段还原、缓存优先参数、失败结果、产品匹配失败与空数据契约错误）</td>
+</tr>
+<tr>
+<td>设备：状态流</td>
+<td><code dir="auto">deviceList</code> / <code dir="auto">productList</code></td>
+<td><code dir="auto">GWIoT.deviceList</code>、<code dir="auto">GWIoT.productList</code></td>
+<td><code dir="auto">GwiotObserverApi</code> target <code dir="auto">deviceList</code> / <code dir="auto">productList</code></td>
+<td>已完成（LiveData 观察）</td>
+<td>已完成</td>
+<td>已完成（订阅驱动观察、退订释放）</td>
+</tr>
+<tr>
+<td>设备：事件流</td>
+<td><code dir="auto">deviceEvents</code> / <code dir="auto">propsChanged</code></td>
+<td><code dir="auto">GWIoT.deviceEvents</code>、<code dir="auto">GWIoT.propsChanged</code></td>
+<td><code dir="auto">GwiotObserverApi</code> target <code dir="auto">deviceEvents</code> / <code dir="auto">propsChanged</code></td>
+<td>已完成（LiveEvent 观察）</td>
+<td>已完成</td>
+<td>已完成（不重放旧事件、sealed 事件还原）</td>
+</tr>
+<tr>
+<td>物模型与权限</td>
+<td><code dir="auto">IPropsComponent.getIoTProps</code> / <code dir="auto">getCloudPlaybackPermission</code> / <code dir="auto">setPowerStatus</code></td>
+<td><code dir="auto">GWIoT.getIoTProps</code>、<code dir="auto">GWIoT.getCloudPlaybackPermission</code>、<code dir="auto">GWIoT.setPowerStatus</code></td>
+<td><code dir="auto">GwiotDeviceApi.getIoTProps</code> / <code dir="auto">getCloudPlaybackPermission</code> / <code dir="auto">setPowerStatus</code></td>
+<td>已完成（按 deviceId 解析 <code dir="auto">IDevice</code>，解析失败返回失败结果）</td>
+<td>已完成（同上）</td>
+<td>已完成（物模型字段、权限失败、电源操作、设备不存在）</td>
+</tr>
+<tr>
+<td>绑定设备</td>
+<td><code dir="auto">IBindComponent.openBind(qrCodeValue)</code> / <code dir="auto">openBind(product)</code> / <code dir="auto">openBindableProductList</code></td>
+<td><code dir="auto">GWIoT.openBind</code>、<code dir="auto">GWIoT.openBindByProduct</code>、<code dir="auto">GWIoT.openBindableProductList</code></td>
+<td><code dir="auto">GwiotDeviceLifecycleApi.openBind</code> / <code dir="auto">openBindProduct(pid)</code> / <code dir="auto">openBindableProductList</code></td>
+<td>已完成（产品按 pid 解析）</td>
+<td>已完成（同上）</td>
+<td>已完成（二维码映射、产品解析、业务失败）</td>
+</tr>
+<tr>
+<td>解绑设备</td>
+<td><code dir="auto">IDevMangerComponent.unbindDevice</code></td>
+<td><code dir="auto">GWIoT.unbindDevice(GwiotDeviceRef)</code></td>
+<td><code dir="auto">GwiotDeviceLifecycleApi.unbindDevice</code></td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（设备引用映射）</td>
+</tr>
+<tr>
+<td>设备分享</td>
+<td><code dir="auto">IDevShareComponent.openShareManagerPage</code> / <code dir="auto">acceptShareDevice(qrCode)</code> / <code dir="auto">openInviteUrl</code> / <code dir="auto">acceptShareDeviceByUrl</code> / <code dir="auto">rejectShareDeviceByUrl</code></td>
+<td><code dir="auto">GWIoT.openShareManagerPage</code>、<code dir="auto">GWIoT.acceptShareDeviceByQRCode</code>、<code dir="auto">GWIoT.openInviteUrl</code>、<code dir="auto">GWIoT.acceptShareDeviceByUrl</code>、<code dir="auto">GWIoT.rejectShareDeviceByUrl</code></td>
+<td><code dir="auto">GwiotDeviceLifecycleApi</code> 同名方法</td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（分享二维码字段、无效邀请失败、邀请链接三态）</td>
+</tr>
+<tr>
+<td>设备升级</td>
+<td><code dir="auto">IDevUpgradeComponent.openBatchUpgradePage</code> / <code dir="auto">IDevCheckUpgradeComponent.checkDevUpgradeInfo</code> / <code dir="auto">batchCheckDevUpgradeInfo</code></td>
+<td><code dir="auto">GWIoT.openBatchUpgradePage</code>、<code dir="auto">GWIoT.checkDeviceUpgrade</code>、<code dir="auto">GWIoT.batchCheckDeviceUpgrade</code></td>
+<td><code dir="auto">GwiotDeviceLifecycleApi</code> 同名方法</td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（类型化升级信息、无设备失败、批量逐项结果）</td>
+</tr>
+<tr>
+<td>绑定事件</td>
+<td><code dir="auto">IBindEventComponent.bindEvents</code></td>
+<td><code dir="auto">GWIoT.bindEvents</code>（<code dir="auto">GwiotBindEvent</code>）</td>
+<td><code dir="auto">GwiotObserverApi</code> target <code dir="auto">bindEvents</code></td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（不重放旧事件、sealed 事件还原）</td>
+</tr>
+<tr>
+<td>设备原生页面</td>
+<td><code dir="auto">IPluginComponent.openHome</code> / <code dir="auto">openPlayback</code> / <code dir="auto">openDevSharePage</code> / <code dir="auto">openDeviceInfoPage</code> / <code dir="auto">openDeviceSettingPage</code> / <code dir="auto">openEventsPage</code> / <code dir="auto">getLastSnapshotPath</code>、<code dir="auto">IMultiLiveComponent.openMultiLivePage</code></td>
+<td><code dir="auto">GWIoT.openHome</code>、<code dir="auto">openPlayback</code>、<code dir="auto">openDevSharePage</code>、<code dir="auto">openDeviceInfoPage</code>、<code dir="auto">openDeviceSettingPage</code>、<code dir="auto">openEventsPage</code>、<code dir="auto">openMultiLivePage</code>、<code dir="auto">getLastSnapshotPath</code></td>
+<td><code dir="auto">GwiotNativePageApi</code> 同名方法</td>
+<td>已完成（按 deviceId 解析 <code dir="auto">IDevice</code>，构造 SDK Option）</td>
+<td>已完成（同上；页面宿主不可用时返回 25100 / 25101 失败）</td>
+<td>已完成（设备引用映射、页面选项映射、失败结果、截图可选值）</td>
+</tr>
+<tr>
+<td>相册</td>
+<td><code dir="auto">IAlbumComponent.openAlbum</code> / <code dir="auto">saveAsset</code></td>
+<td><code dir="auto">GWIoT.openAlbum</code>、<code dir="auto">GWIoT.saveAlbumAssets</code></td>
+<td><code dir="auto">GwiotServicePageApi.openAlbum(GAlbumAssetMsg?)</code> / <code dir="auto">saveAlbumAssets(List&lt;GAlbumAssetMsg&gt;)</code></td>
+<td>已完成（按 deviceId 解析 <code dir="auto">IDevice</code>，媒体类型与摄像头字段映射）</td>
+<td>已完成（同上）</td>
+<td>已完成（设备引用与资源映射、批量保存、失败结果）</td>
+</tr>
+<tr>
+<td>云服务与会员</td>
+<td><code dir="auto">ICloudServiceComponent.openCloudPage</code> / <code dir="auto">queryMembershipInfo</code> / <code dir="auto">openMembershipCenterPage</code>、<code dir="auto">membershipInfo</code></td>
+<td><code dir="auto">GWIoT.openCloudPage</code>、<code dir="auto">queryMembershipInfo</code>、<code dir="auto">openMembershipCenterPage</code>、<code dir="auto">GWIoT.membershipInfo</code></td>
+<td><code dir="auto">GwiotServicePageApi</code> 同名方法 + <code dir="auto">GwiotObserverApi</code> target <code dir="auto">membershipInfo</code></td>
+<td>已完成（含 LiveData 观察与页面打开）</td>
+<td>已完成（同上）</td>
+<td>已完成（缓存优先参数、公共字段还原、未知状态回退、订阅驱动观察）</td>
+</tr>
+<tr>
+<td>流量服务页</td>
+<td><code dir="auto">ITrafficServiceComponent.openTrafficPage</code></td>
+<td><code dir="auto">GWIoT.openTrafficPage</code></td>
+<td><code dir="auto">GwiotServicePageApi.openTrafficPage</code></td>
+<td>已完成（按 deviceId 解析 <code dir="auto">IDevice</code>）</td>
+<td>已完成</td>
+<td>已完成（可空设备引用、失败结果）</td>
+</tr>
+<tr>
+<td>帮助与问题反馈</td>
+<td><code dir="auto">IHelperPageComponent.openHelperPage</code> / <code dir="auto">openIssueFeedbackPage</code> / <code dir="auto">submitIssueFeedback</code></td>
+<td><code dir="auto">GWIoT.openHelperPage</code>、<code dir="auto">openIssueFeedbackPage</code>、<code dir="auto">submitIssueFeedback</code></td>
+<td><code dir="auto">GwiotServicePageApi</code> 同名方法</td>
+<td>已完成</td>
+<td>已完成</td>
+<td>已完成（反馈字段映射、工单结果、失败结果）</td>
+</tr>
+<tr>
+<td>帮助页入口配置</td>
+<td><code dir="auto">IHelperPageComponent.isCustomHelperPage</code> / <code dir="auto">helperPageUrl</code> / <code dir="auto">isShowFeedbackHistory</code> / <code dir="auto">isHiddenFeedbackEntry</code> / <code dir="auto">onOpenHelperPage</code></td>
+<td><code dir="auto">GWIoT.configureHelperPage(GwiotHelperPageConfig)</code></td>
+<td><code dir="auto">GwiotSystemApi.configureHelperPage</code> + <code dir="auto">GwiotHostServiceEvents.onOpenHelperPage</code></td>
+<td>已完成（同步属性下发 + 宿主回调转发）</td>
+<td>已完成（同上）</td>
+<td>已完成（属性映射、宿主回调触发、未提供回调时忽略）</td>
+</tr>
+<tr>
+<td>手机信息与默认头像</td>
+<td><code dir="auto">IPhoneContentComponent.phoneUniqueId</code>、<code dir="auto">IHttpServiceComponent.queryDefaultAvatarList</code></td>
+<td><code dir="auto">GWIoT.phoneUniqueId</code>、<code dir="auto">GWIoT.queryDefaultAvatarList</code></td>
+<td><code dir="auto">GwiotSystemApi</code> 同名方法</td>
+<td>已完成（同步调用封装为异步通道）</td>
+<td>已完成</td>
+<td>已完成（结果还原与列表）</td>
+</tr>
+<tr>
+<td>消息中心</td>
+<td><code dir="auto">IMessageCenterComponent.queryUnreadCount</code> / <code dir="auto">readMessage</code> / <code dir="auto">openMessageCenterPage</code>、<code dir="auto">unreadCount</code></td>
+<td><code dir="auto">GWIoT.queryUnreadCount</code>、<code dir="auto">readMessage</code>、<code dir="auto">openMessageCenterPage</code>、<code dir="auto">GWIoT.unreadCount</code></td>
+<td><code dir="auto">GwiotNotificationApi</code> 同名方法 + <code dir="auto">GwiotObserverApi</code> target <code dir="auto">unreadCount</code></td>
+<td>已完成（suspend 桥接 + LiveData 观察）</td>
+<td>已完成（同上）</td>
+<td>已完成（未读数、空即全部、失败结果、订阅驱动观察）</td>
+</tr>
+<tr>
+<td>二维码</td>
+<td><code dir="auto">IQRCodeComponent.recognizeQRCode</code> / <code dir="auto">openScanQRCodePage</code> / <code dir="auto">getDeviceQrCode</code></td>
+<td><code dir="auto">GWIoT.recognizeQRCode</code>、<code dir="auto">openScanQRCodePage</code>、<code dir="auto">closeScanQRCodeScene</code>、<code dir="auto">getDeviceQrCode</code>、<code dir="auto">GWIoT.qrCodeRecognized</code></td>
+<td><code dir="auto">GwiotNotificationApi</code> 同名方法 + <code dir="auto">GwiotObserverApi</code> target <code dir="auto">qrCodeRecognized</code></td>
+<td>已完成（识别回调转一次性事件并保留场景关闭动作）</td>
+<td>已完成（同上）</td>
+<td>已完成（三类二维码还原、选项映射、事件不重放、可空二维码）</td>
+</tr>
+<tr>
+<td>系统推送</td>
+<td><code dir="auto">IPushNotificationComponent.receivePushNotification</code> / <code dir="auto">clickPushNotification</code></td>
+<td><code dir="auto">GWIoT.receivePushNotification</code>、<code dir="auto">clickPushNotification</code></td>
+<td><code dir="auto">GwiotNotificationApi</code> 同名方法</td>
+<td>已完成（payload 转 JSON 后交给 SDK）</td>
+<td>已完成（payload 转 userInfo 字典）</td>
+<td>已完成（payload 原样转交、不侵入系统注册）</td>
+</tr>
+<tr>
+<td>页面生命周期</td>
+<td><code dir="auto">IPageLifecycleComponent.pageLifecycleEvents</code></td>
+<td><code dir="auto">GWIoT.pageLifecycleEvents</code></td>
+<td><code dir="auto">GwiotObserverApi</code> target <code dir="auto">pageLifecycle</code></td>
+<td>已完成（LiveEvent 观察）</td>
+<td>已完成（同上）</td>
+<td>已完成（阶段与页面还原、未知回退、事件不重放）</td>
+</tr>
+<tr>
+<td>LiveData/LiveEvent 观察基础设施</td>
+<td><code dir="auto">LiveData</code> / <code dir="auto">LiveEvent</code> / <code dir="auto">MutableLiveData</code> / <code dir="auto">MutableLiveEvent</code></td>
+<td><code dir="auto">GWIoT.*</code> 状态流与事件流、<code dir="auto">GwiotObserverApi</code></td>
+<td>已完成（按订阅引用计数建立/释放原生观察）</td>
+<td>已完成（同上）</td>
+<td>已完成（各领域流的订阅与退订测试）</td>
+<td></td>
+</tr>
+<tr>
+<td>宿主服务：登记/解除</td>
+<td><code dir="auto">IInitializeDispatcherComponent.registerHostService(s)</code>、<code dir="auto">registerHostAccountService</code>、<code dir="auto">registerHostCloudService</code>、<code dir="auto">registerHostTrafficService</code></td>
+<td><code dir="auto">GWIoT.registerHostServices(GwiotHostServices)</code>、<code dir="auto">GWIoT.clearHostServices</code></td>
+<td><code dir="auto">GwiotHostServiceApi.registerHostServices(GHostServicesMsg)</code></td>
+<td>已完成（按类型注册桥接；同步开关由登记位缓存）</td>
+<td>已完成（同上）</td>
+<td>已完成（按类型登记、部分登记、晚登记抛错、解除后恢复默认）</td>
+</tr>
+<tr>
+<td>宿主账号服务</td>
+<td><code dir="auto">IHostAccountService.onRequestUserC2CInfo</code> / <code dir="auto">onRequestAccountInfoByAccount</code> / <code dir="auto">onRequestAccountInfoByAccessId</code></td>
+<td><code dir="auto">GwiotHostAccountService.requestUserC2CInfo</code> / <code dir="auto">requestAccountInfoByAccount</code> / <code dir="auto">requestAccountInfoByAccessIds</code></td>
+<td><code dir="auto">GwiotHostServiceEvents.onRequestUserC2CInfo</code> 等 3 个方法</td>
+<td>已完成（转发并转换 <code dir="auto">GWResult</code>/<code dir="auto">GWError</code>）</td>
+<td>已完成（同上）</td>
+<td>已完成（成功、业务失败、意外异常）</td>
+</tr>
+<tr>
+<td>宿主云服务</td>
+<td><code dir="auto">IHostCloudService.isCustomOpenCloudPage</code> / <code dir="auto">openCloudPage</code></td>
+<td><code dir="auto">GwiotHostCloudService.isCustomOpenCloudPage</code> / <code dir="auto">openCloudPage</code></td>
+<td><code dir="auto">GwiotHostServiceEvents.onOpenCloudPage</code></td>
+<td>已完成（含同步开关缓存）</td>
+<td>已完成（同上）</td>
+<td>已完成（回调、开关映射、解除后开关关闭）</td>
+</tr>
+<tr>
+<td>宿主流量服务</td>
+<td><code dir="auto">IHostTrafficService.isCustomOpenTrafficPage</code> / <code dir="auto">openTrafficPage</code></td>
+<td><code dir="auto">GwiotHostTrafficService.isCustomOpenTrafficPage</code> / <code dir="auto">openTrafficPage</code></td>
+<td><code dir="auto">GwiotHostServiceEvents.onOpenTrafficPage</code></td>
+<td>已完成（含同步开关缓存）</td>
+<td>已完成（同上）</td>
+<td>已完成（回调、开关映射、解除后开关关闭）</td>
+</tr>
+<tr>
+<td>宿主设置服务</td>
+<td><code dir="auto">IHostSettingService.onDisplayEventDetectionSchedule</code> / <code dir="auto">onDisplayEventTriggerTypes</code></td>
+<td><code dir="auto">GwiotHostSettingService.isDisplayEventDetectionSchedule</code> / <code dir="auto">displayEventTriggerTypes</code></td>
+<td><code dir="auto">GwiotHostServiceEvents.onDisplayEventDetectionSchedule</code> / <code dir="auto">onDisplayEventTriggerTypes</code></td>
+<td>已完成（缓存 + 异步预热）</td>
+<td>已完成（同上）</td>
+<td>已完成（默认放行、只能减少、空列表全隐藏）</td>
+</tr>
+<tr>
+<td>宿主支持服务</td>
+<td><code dir="auto">IHostSupportEntryService.isHiddenSupportEntry</code> / <code dir="auto">IHostSupportService.openSupportCenterPage</code></td>
+<td><code dir="auto">GwiotHostSupportService.isHiddenSupportEntry</code> / <code dir="auto">openSupportCenterPage</code></td>
+<td><code dir="auto">GwiotHostServiceEvents.onOpenSupportCenterPage</code></td>
+<td>已完成（含未登记时回退内建帮助页）</td>
+<td>已完成（同上）</td>
+<td>已完成（回调、开关映射、解除后回退默认）</td>
+</tr>
+<tr>
+<td>宿主日志服务</td>
+<td><code dir="auto">ILogOutputComponent.log</code></td>
+<td><code dir="auto">GwiotHostLogService.onSdkLog</code></td>
+<td><code dir="auto">GwiotHostServiceEvents.onSdkLog(GSdkLogMsg)</code></td>
+<td>已完成（单向通知，首次登记时注册组件）</td>
+<td>已完成（同上）</td>
+<td>已完成（级别映射、忽略未知级别、宿主异常被忽略）</td>
+</tr>
+<tr>
+<td>播放器：平台视图</td>
+<td><code dir="auto">IPlayerComponent.getLivePlayer</code>、<code dir="auto">IPlayer.videoView</code> / <code dir="auto">videoViews</code></td>
+<td><code dir="auto">GwiotPlayerView</code>（<code dir="auto">AndroidView</code> / <code dir="auto">UiKitView</code>）</td>
+<td>平台视图类型 <code dir="auto">gwiot_player</code> + 创建参数（handleId/deviceId/solution/definition）</td>
+<td>已完成（<code dir="auto">PlatformViewFactory</code> 内 <code dir="auto">GWIoT.getLivePlayer</code> 并挂载 SDK <code dir="auto">FrameLayout</code>）</td>
+<td>已完成（<code dir="auto">FlutterPlatformViewFactory</code> 挂载 SDK <code dir="auto">UIView</code>）</td>
+<td>已完成（创建参数映射、移除时释放、保活不释放）</td>
+</tr>
+<tr>
+<td>播放器：控制与状态</td>
+<td><code dir="auto">IPlayer.play</code> / <code dir="auto">stop</code> / <code dir="auto">mute</code> / <code dir="auto">scalingMode</code> / <code dir="auto">getError</code>、<code dir="auto">ILivePlayer.definition</code> / <code dir="auto">intercom</code></td>
+<td><code dir="auto">GwiotPlayerController.play</code> / <code dir="auto">stop</code> / <code dir="auto">setMute</code> / <code dir="auto">setScalingMode</code> / <code dir="auto">setDefinition</code> / <code dir="auto">startIntercom</code> / <code dir="auto">stopIntercom</code> / <code dir="auto">isIntercomActive</code> / <code dir="auto">getError</code> / <code dir="auto">release</code>、<code dir="auto">GwiotPlayerController.status</code></td>
+<td><code dir="auto">GwiotPlayerApi</code> 同名方法 + <code dir="auto">GwiotObserverApi</code> target <code dir="auto">playerState</code>（按 <code dir="auto">handleId</code> 隔离）</td>
+<td>已完成（suspend 桥接 + LiveData 观察）</td>
+<td>已完成（同上）</td>
+<td>已完成（句柄隔离、静音/缩放/清晰度映射、对讲、错误读取、状态流）</td>
+</tr>
+<tr>
+<td>公共实体与枚举</td>
+<td><code dir="auto">entities/</code>、<code dir="auto">player/constants</code></td>
+<td><code dir="auto">lib/src/models/</code></td>
+<td>已按公开字段建模（内部字段与平台专有对象除外）</td>
+<td>不适用（由各方法映射覆盖）</td>
+<td>不适用</td>
+<td>已完成（语言枚举取值与 <code dir="auto">isoCode</code> 对齐、平台功能码、UI 配置、播放器状态等）</td>
+</tr>
+</tbody>
+</table>
+<div class="sl-heading-wrapper level-h2"><h2 id="已完成纵切面">已完成纵切面</h2><a class="sl-anchor-link" href="#已完成纵切面"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “已完成纵切面”</span></a></div>
+<ul>
+<li>初始化：<code dir="auto">GWIoT.initialize</code>、<code dir="auto">GWIoT.sdkInitFinish</code>、<code dir="auto">GWIoT.dispose</code> 已完成，
+<code dir="auto">flutter analyze</code>、<code dir="auto">flutter test</code>（初始化 7 例 + 冒烟 1 例）、<code dir="auto">flutter build apk --debug</code>、
+<code dir="auto">flutter build ios --debug --no-codesign</code> 均通过（2026-09-14）。</li>
+<li>宿主服务：<code dir="auto">GWIoT.registerHostServices</code>、<code dir="auto">GWIoT.clearHostServices</code> 与五类宿主服务契约已完成，
+验证同上（宿主服务 9 例）。</li>
+<li>账号与注册：验证同上（账号 12 例）。观察者通道由订阅引用计数驱动，<code dir="auto">GwiotLiveEvent</code> 不重放旧事件。</li>
+<li>设备与物模型：验证同上（设备 12 例）。设备引用只传 <code dir="auto">deviceId</code>，由原生在 SDK 上下文中解析。</li>
+<li>绑定/分享/升级：验证同上（生命周期 12 例）。产品与设备按标识在原生 SDK 上下文解析。</li>
+<li>两端 SDK 差异：安卓固定的 AAR（<code dir="auto">com.gwell:gwiotapi</code>）没有 <code dir="auto">openBind(qrCodeValue, qrCodeFrom)</code> 重载，跨端契约
+只暴露两端共有的 <code dir="auto">openBind(qrCodeValue)</code>。</li>
+<li>设备原生页面：验证同上（原生页面 7 例）。iOS 页面宿主检查返回插件错误码 25100（无 rootViewController）与 25101（root 未嵌入 UINavigationController）。</li>
+<li>相册/云/流量/帮助/反馈：验证同上（服务页面 10 例）。会员状态经观察者通道以 LiveData 发布。</li>
+<li>消息/二维码/推送/页面生命周期：验证同上（通知与生命周期 13 例）。扫码识别与页面生命周期以 LiveEvent 消费，不重放旧事件；推送注册仍由宿主 App 负责。</li>
+<li>播放器与对讲：验证同上（播放器 8 例，含 2 例平台视图 widget 测试）。播放器按 <code dir="auto">handleId</code> 隔离，状态经观察者通道以 LiveData 发布；widget 移除默认释放，<code dir="auto">keepAliveOnDispose</code> 显式保活。</li>
+<li>系统配置、日志与帮助页配置：验证同上（系统配置 9 例）。<code dir="auto">setLanguage</code>/<code dir="auto">setEnvironment</code>/<code dir="auto">setUiConfiguration</code> 为同步透传，<code dir="auto">getPlatformConfig</code> 为 suspend 桥接；SDK 日志经宿主日志服务单向转发。</li>
+<li>实际依赖版本以源码为准：Android 见 <code dir="auto">android/build.gradle</code>，iOS 见 <code dir="auto">ios/gwiot_flutter_plugin.podspec</code>（最低 iOS 15）。</li>
+<li>消息中心与扫码能力依赖原生 GWIoT SDK 注册的组件（<code dir="auto">IMessageCenterPageComponent</code> / <code dir="auto">IQRCodeComponent</code>）；
+组件未注册时 SDK 返回 <code dir="auto">not found component</code> 业务失败，插件原样透传而不在 Flutter 侧兜底页面。</li>
+<li>通道调用与「错误 + 数据」结果转换各自只有一个实现（<code dir="auto">lib/src/api/platform_call.dart</code>、
+<code dir="auto">lib/src/api/mapping.dart</code> 的 <code dir="auto">_valueResultOf</code>/<code dir="auto">_failureOf</code>），门面与播放器控制器不再各维护一份；
+测试数量 102 例（新增 2 例覆盖门面/播放器的通道异常收敛）。</li>
+<li>Pigeon 生成器由 22.7.4 升至 26.3.4（<code dir="auto">pubspec.yaml</code> 约束 <code dir="auto">^26.3.4</code>），三端生成文件已重新生成。
+已核对 Kotlin 83 个接口方法、Swift 100 个 protocol 方法与 Dart 80 个公开类集合与升级前完全一致，
+无签名破坏；新增能力为数据类 <code dir="auto">==</code>/<code dir="auto">hashCode</code>（Dart 126 处）、Kotlin <code dir="auto">FlutterError</code> 改继承
+<code dir="auto">RuntimeException</code>、生成期文件写入大幅减少。生成文件体积增量：Dart +5%、Kotlin +40%、Swift +28%。</li>
+<li>播放器画面与对讲需要真机验证：本仓库只保证两端平台视图注册、创建参数映射、控制通道与状态流编译/单测通过，
+实际视频渲染、唤醒设备与音频链路依赖 SDK 运行时与真实设备。</li>
+<li>多路同屏只透传 SDK 原生页面（<code dir="auto">openMultiLivePage</code>），Flutter 侧不实现网格 UI。</li>
+<li><code dir="auto">ILogOutputComponent</code> 只能通过 <code dir="auto">GWPlugin.register</code> 注册且 SDK 没有注销入口，因此原生在首次登记日志服务时注册一次；
+之后 <code dir="auto">clearHostServices</code> 只停止向 Flutter 转发，不会从 SDK 注销组件。</li>
+<li><code dir="auto">LanguageCode</code> 枚举按 KMP 取值重新对齐（22 个取值，修正了此前 <code dir="auto">ar(12)</code> 与 KMP 不一致的建模）；
+<code dir="auto">Theme.Fonts</code>、图标对象与数据库内部字段不进入跨端契约。</li>
+<li>未知类型的一次性事件（<code dir="auto">accountEvent</code> / <code dir="auto">deviceEvents</code> / <code dir="auto">propsChanged</code> / <code dir="auto">bindEvents</code>）在观察流解码前被
+过滤丢弃，不会伪造成「被踢出」「设备被删除」「离线」等具体事件；这是 code-review 修复的行为契约。</li>
+<li><code dir="auto">closeScanQRCodeScene</code> 是本插件新增的补充 API：KMP <code dir="auto">IQRCodeComponent</code> 的 <code dir="auto">openScanQRCodePage</code> 通过
+<code dir="auto">RecognizedCallback</code> 交出 <code dir="auto">SceneCloseable</code>，跨端无法把函数回调直接变成 Pigeon 参数，因此拆成
+一次性事件 + 显式关闭方法（原始 SDK 调用签名不变）。</li>
+<li>安卓（Reoqoo 插件包）的扫码组件在跳转 <code dir="auto">reoqoo://config_net/scan_qrcode</code> 之后会<strong>立即</strong>返回
+<code dir="auto">Failure("not support return the qrcodeType")</code>：它表示「页面已打开，但当前平台不把二维码类型回调给
+调用方」，<strong>不是打开失败</strong>。宿主不要据此判断页面没起来（demo 已单独识别这条文案，不再记成失败）。
+iOS 走 <code dir="auto">GWIoTKit</code>，行为以真机为准。</li>
+<li>06 的「页面交接契约」验证止于两端编译 + 页面宿主检查（iOS 宿主不可用返回 25100 / 25101），
+没有真机集成用例。2026-09-17 补充：demo 阶段发现 Flutter 模板的根控制器是裸
+<code dir="auto">FlutterViewController</code>，SDK 页面因此无处可 push；已在 demo 侧包装导航控制器，并把这种情况
+单独映射为 25101，宿主接入时能立刻定位。</li>
+<li>已知限制：设置服务的同步决策在缓存未命中时先返回 SDK 默认值再异步拉取 Dart 结果；Dart 侧宿主
+实现抛出的意外异常映射为 <code dir="auto">Reason.Undefined</code>（25000），<code dir="auto">Reason.NotFoundComponent</code>（25001）
+只用于未登记宿主服务的组件缺失场景。</li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="更新规则">更新规则</h2><a class="sl-anchor-link" href="#更新规则"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “更新规则”</span></a></div>
+<p>每实现一个方法或状态流，必须把对应行细化至方法级并同时更新：Pigeon 契约、Android 映射、
+iOS 映射和 Dart 测试。仅生成 Pigeon 文件不可以把任何“映射”列改为完成。</p>
+</div><footer class="sl-flex astro-ddtxxk7k"><div class="meta sl-flex astro-ddtxxk7k"></div><div class="pagination-links print:hidden astro-b5raizh3" dir="ltr"><a href="/gwiot-docs/en/capabilities/" rel="prev" class="astro-b5raizh3"><svg aria-hidden="true" class="astro-b5raizh3 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-b5raizh3">Previous<br class="astro-b5raizh3"><span class="link-title astro-b5raizh3">Capabilities</span></span></a><a href="/gwiot-docs/en/customization/" rel="next" class="astro-b5raizh3"><svg aria-hidden="true" class="astro-b5raizh3 astro-hkc32dio" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-b5raizh3">Next<br class="astro-b5raizh3"><span class="link-title astro-b5raizh3">Built-in vs. Customizable</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
