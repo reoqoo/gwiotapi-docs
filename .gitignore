@@ -1,0 +1,27 @@
+.gradle
+.idea
+build
+
+*/*/Pods
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad/
+
+# Node / 站点工程（specs/001-gwiot-docs-framework 的 site/）
+node_modules/
+dist/
+.astro/
+*.log
+.env
+.env.*
+npm-debug.log*
+
+# 通用
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+
+# 生成物：由 tools/build-github-md-css.mjs 生成，勿手改
+site/src/styles/github-markdown.generated.css
